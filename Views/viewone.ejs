@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="/images/favicon.ico">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="style.css"/>
+    <title>SuperPedia</title>
+</head>
+<body>
+    <div class="main-container-one">
+        <%- include('../partials/header.ejs') %>
+        <section>
+            <div class="container-fluid px-3 py-3 d-flex flex-column">
+                <div class="row">
+                    <div class="container-fluid d-flex justify-content-between align-items-center">
+                        <div class="page-change">
+                            <a href=<%- "/ViewOne?id="+(id[0]).toString() %> class="a-button" id="btn-id-name">&laquo; <%= "#"+id[0]+" "+name[0] %> </a>
+                            <a href=<%- "/ViewOne?id="+(id[0]).toString() %> class="a-button" id="btn-id">&laquo; <%= "#"+id[0] %> </a>
+                        </div>
+                        <div class="d-flex flex-column">
+                            <img class="align-self-center" src=<%= image[1]["url"] %> class="card-img-top" alt="img">
+                            <h4 class="mt-2 fw-bold text-light text-center text-wrap"> <%= "#"+id[1]+": "+name[1] %></h4>
+                        </div>
+                        <div class="page-change">
+                            <a href=<%- "/ViewOne?id="+(id[2]).toString() %> class="a-button" id="btn-id-name"><%= "#"+id[2]+" "+name[2] %> &raquo;</a>
+                            <a href=<%- "/ViewOne?id="+(id[2]).toString() %> class="a-button" id="btn-id"><%= "#"+id[2] %> &raquo;</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="row mt-2">
+                    <div class="container d-flex justify-content-center flex-wrap" id="Info">
+                        <div class="ms-5 mt-2">
+                            <p>
+                                <button class="btn btn-primary" type="button" data-bs-toggle="collapse" data-bs-target="#PowerStats" data-bs-parent="#Info">
+                                  PowerStats
+                                </button>
+                            </p>
+                            <div class="collapse" id="PowerStats" data-bs-parent="#Info">
+                                <div class="card card-body">
+                                    <p><span class="text-info">Intelligence:</span> <%= stats[1]["intelligence"] %> </p>
+                                    <p><span class="text-info">Strength:</span> <%= stats[1]["strength"] %> </p>
+                                    <p><span class="text-info">Speed:</span> <%= stats[1]["speed"] %> </p>
+                                    <p><span class="text-info">Durabilty:</span> <%= stats[1]["durabilty"] %> </p>
+                                    <p><span class="text-info">Power:</span> <%= stats[1]["power"] %> </p>
+                                    <p><span class="text-info">Combat:</span> <%= stats[1]["combat"] %> </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="ms-5 mt-2">
+                            <p>
+                                <button class="btn btn-primary" type="button" data-bs-toggle="collapse" data-bs-target="#Biography" data-bs-parent="#Info">
+                                  Biography
+                                </button>
+                            </p>
+                            <div class="collapse" id="Biography" data-bs-parent="#Info">
+                                <div class="card card-body" style="width: fit-content;">
+                                    <p><span class="text-info">Full Name:</span> <%= biography[1]["full-name"] %> </p>
+                                    <p><span class="text-info">Alter-Egos:</span> <%= biography[1]["alter-egos"] %> </p>
+                                    <p><span class="text-info">Aliases:</span> <%= biography[1]["aliases"] %> </p>
+                                    <p><span class="text-info">Place of Birth:</span> <%= biography[1]["place-of-birth"] %> </p>
+                                    <p><span class="text-info">First Appearance:</span> <%= biography[1]["first-appearance"] %> </p>
+                                    <p><span class="text-info">Publisher:</span> <%= biography[1]["publisher"] %> </p>
+                                    <p><span class="text-info">Alignment:</span> <%= biography[1]["alignment"] %> </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="ms-5 mt-2">
+                            <p>
+                                <button class="btn btn-primary" type="button" data-bs-toggle="collapse" data-bs-target="#Appearance" data-bs-parent="#Info">
+                                  Appearance
+                                </button>
+                            </p>
+                            <div class="collapse" id="Appearance" data-bs-parent="#Info">
+                                <div class="card card-body" style="width: fit-content;">
+                                    <p><span class="text-info">Gender:</span> <%= appearance[1]["gender"] %> </p>
+                                    <p><span class="text-info">Race:</span> <%= appearance[1]["race"] %> </p>
+                                    <p><span class="text-info">Height:</span> <%= appearance[1]["height"] %> </p>
+                                    <p><span class="text-info">Weight:</span> <%= appearance[1]["weight"] %> </p>
+                                    <p><span class="text-info">Eye Color:</span> <%= appearance[1]["eye-color"] %> </p>
+                                    <p><span class="text-info">Hair Color:</span> <%= appearance[1]["hair-color"] %> </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="ms-5 mt-2">
+                            <p>
+                                <button class="btn btn-primary" type="button" data-bs-toggle="collapse" data-bs-target="#Connections" data-bs-parent="#Info">
+                                  Connections
+                                </button>
+                            </p>
+                            <div class="collapse" id="Connections" data-bs-parent="#Info">
+                                <div class="card card-body" style="width: fit-content;">
+                                    <p><span class="text-info">Group Affiliation:</span> <%= connections[1]["group-affiliation"] %> </p>
+                                    <p><span class="text-info">Relatives:</span> <%= connections[1]["relatives"] %> </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="ms-5 mt-2">
+                            <p>
+                                <button class="btn btn-primary" type="button" data-bs-toggle="collapse" data-bs-target="#Work" data-bs-parent="#Info">
+                                  Work
+                                </button>
+                            </p>
+                            <div class="collapse" id="Work" data-bs-parent="#Info">
+                                <div class="card card-body" style="width: fit-content;">
+                                    <p><span class="text-info">Occupation:</span> <%= work[1]["occupation"] %> </p>
+                                    <p><span class="text-info">Base:</span> <%= work[1]["base"] %> </p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                    </div>
+                </div>
+            </div>
+        </section>
+        <%- include('../partials/aside.ejs') %>
+        <footer class="footer-container">
+            <p class="text-center pt-3 text-light">@ Web App Development</p>
+        </footer>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+</body>
+</html>

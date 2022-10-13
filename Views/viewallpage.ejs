@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="/images/favicon.ico">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="style.css"/>
+    <title>SuperPedia</title>
+</head>
+<body>
+    <div class="main-container bg-success">
+        <%- include('../partials/header.ejs') %>
+        <section>
+            <div class="d-flex flex-row justify-content-evenly flex-wrap">
+                <div class="d-flex flex-row justify-content-evenly flex-wrap">
+                    <% if(name[0]){ %> 
+                        <div class="card m-3">
+                            <img src=<%= image[0]["url"] %>  class="card-img-top" alt="img">
+                            <div class="card-body">
+                                <h5 class="card-title"><%= name[0] %> </h5>
+                                <ul class="list-group list-group-flush">
+                                    <li class="list-group-item pe-1 ps-1"><span class="text-warning">Full Name:</span> <%= biography[0]["full-name"] %> </li>
+                                    <li class="list-group-item pe-1 ps-1"><span class="text-warning">Publisher:</span> <%= biography[0]["publisher"] %> </li>
+                                    <li class="list-group-item pe-1 ps-1"><span class="text-warning">Alignment:</span> <%= biography[0]["alignment"] %> </li>
+                                </ul>
+                                <br>
+                                <a href=<%- "/ViewOne?id="+(id[0]).toString() %> class="card-link">More info..</a>
+                            </div>
+                        </div>
+                    <% } %>
+                    <% if(name[1]){ %> 
+                        <div class="card m-3">
+                            <img src=<%= image[1]["url"] %>  class="card-img-top" alt="img">
+                            <div class="card-body">
+                                <h5 class="card-title"><%= name[1] %> </h5>
+                                <ul class="list-group list-group-flush">
+                                    <li class="list-group-item pe-1 ps-1"><span class="text-warning">Full Name:</span> <%= biography[1]["full-name"] %> </li>
+                                    <li class="list-group-item pe-1 ps-1"><span class="text-warning">Publisher:</span> <%= biography[1]["publisher"] %> </li>
+                                    <li class="list-group-item pe-1 ps-1"><span class="text-warning">Alignment:</span> <%= biography[1]["alignment"] %> </li>
+                                </ul>
+                                <br>
+                                <a href=<%- "/ViewOne?id="+(id[1]).toString() %> class="card-link">More info..</a>
+                            </div>
+                        </div>
+                    <% } %>
+                    <% if(name[2]){ %> 
+                        <div class="card m-3">
+                            <img src=<%= image[2]["url"] %>  class="card-img-top" alt="img">
+                            <div class="card-body">
+                                <h5 class="card-title"><%= name[2] %> </h5>
+                                <ul class="list-group list-group-flush">
+                                    <li class="list-group-item pe-1 ps-1"><span class="text-warning">Full Name:</span> <%= biography[2]["full-name"] %> </li>
+                                    <li class="list-group-item pe-1 ps-1"><span class="text-warning">Publisher:</span> <%= biography[2]["publisher"] %> </li>
+                                    <li class="list-group-item pe-1 ps-1"><span class="text-warning">Alignment:</span> <%= biography[2]["alignment"] %> </li>
+                                </ul>
+                                <br>
+                                <a href=<%- "/ViewOne?id="+(id[2]).toString() %> class="card-link">More info..</a>
+                            </div>
+                        </div>
+                    <% } %>
+                    <% if(name[3]){ %>
+                        <div class="card m-3">
+                            <img src=<%= image[3]["url"] %>  class="card-img-top" alt="img">
+                            <div class="card-body">
+                                <h5 class="card-title"><%= name[3] %> </h5>
+                                <ul class="list-group list-group-flush">
+                                    <li class="list-group-item pe-1 ps-1"><span class="text-warning">Full Name:</span> <%= biography[3]["full-name"] %> </li>
+                                    <li class="list-group-item pe-1 ps-1"><span class="text-warning">Publisher:</span> <%= biography[3]["publisher"] %> </li>
+                                    <li class="list-group-item pe-1 ps-1"><span class="text-warning">Alignment:</span> <%= biography[3]["alignment"] %> </li>
+                                </ul>
+                                <br>
+                                <a href=<%- "/ViewOne?id="+(id[3]).toString() %> class="card-link">More info..</a>
+                            </div>
+                        </div>
+                    <% } %> 
+                    <% if(name[4]){ %> 
+                        <div class="card m-3">
+                            <img src=<%= image[4]["url"] %>  class="card-img-top" alt="img">
+                            <div class="card-body">
+                                <h5 class="card-title"><%= name[4] %> </h5>
+                                <ul class="list-group list-group-flush">
+                                    <li class="list-group-item pe-1 ps-1"><span class="text-warning">Full Name:</span> <%= biography[4]["full-name"] %> </li>
+                                    <li class="list-group-item pe-1 ps-1"><span class="text-warning">Publisher:</span> <%= biography[4]["publisher"] %> </li>
+                                    <li class="list-group-item pe-1 ps-1"><span class="text-warning">Alignment:</span> <%= biography[4]["alignment"] %> </li>
+                                </ul>
+                                <br>
+                                <a href=<%- "/ViewOne?id="+(id[4]).toString() %> class="card-link">More info..</a>
+                            </div>
+                        </div>
+                    <% } %> 
+                    <% if(name[5]){ %> 
+                        <div class="card m-3">
+                            <img src=<%= image[5]["url"] %>  class="card-img-top" alt="img">
+                            <div class="card-body">
+                                <h5 class="card-title"><%= name[5] %> </h5>
+                                <ul class="list-group list-group-flush">
+                                    <li class="list-group-item pe-1 ps-1"><span class="text-warning">Full Name:</span> <%= biography[5]["full-name"] %> </li>
+                                    <li class="list-group-item pe-1 ps-1"><span class="text-warning">Publisher:</span> <%= biography[5]["publisher"] %> </li>
+                                    <li class="list-group-item pe-1 ps-1"><span class="text-warning">Alignment:</span> <%= biography[5]["alignment"] %> </li>
+                                </ul>
+                                <br>
+                                <a href=<%- "/ViewOne?id="+(id[5]).toString() %> class="card-link">More info..</a>
+                            </div>
+                        </div>
+                    <% } %> 
+                </div>
+            </div>
+            <nav style="width: 100%;">
+                <ul class="pagination justify-content-center">        
+                    <% if(page<11){ %>
+                        <li class="page-item disabled">
+                            <a class="page-link" href="#" tabindex="-1">
+                                <span>&laquo;</span>
+                            </a>
+                        </li>
+                    <% }else{ %>
+                        <li class="page-item">
+                            <a class="page-link" href=<%- "/ViewAll?page="+(page-10).toString() %> >
+                                <span>&laquo;</span>
+                            </a>
+                        </li>
+                    <% } %>
+                    <% if(page==1){ %>
+                        <li class="page-item disabled">
+                            <a class="page-link" href="#" tabindex="-1">Previous</a>
+                        </li>
+                    <% }else{ %>
+                        <li class="page-item">
+                            <a class="page-link" href=<%- "/ViewAll?page="+(page-1).toString() %>>Previous</a>
+                        </li>
+                    <% } %>
+                    <li class="page-item">
+                        <a class="page-link"
+                            <% if((page-1)%5==0){ %>
+                                href=<%- "/ViewAll?page="+(page).toString() %>
+                            <% }else if((page-2)%5==0){ %>
+                                href=<%- "/ViewAll?page="+(page-1).toString() %>   
+                            <% }else if((page-3)%5==0){ %>
+                                href=<%- "/ViewAll?page="+(page-2).toString() %>   
+                            <% }else if((page-4)%5==0){ %>
+                                href=<%- "/ViewAll?page="+(page-3).toString() %>   
+                            <% }else if((page)%5==0){ %>
+                                href=<%- "/ViewAll?page="+(page-4).toString() %>   
+                            <% } %>
+                        > 
+                            <% if((page-1)%5==0){ %>
+                                <%= page %>
+                            <% }else if((page-2)%5==0){ %>   
+                                <%= page-1 %>
+                            <% }else if((page-3)%5==0){ %>   
+                                <%= page-2 %>
+                            <% }else if((page-4)%5==0){ %>   
+                                <%= page-3 %>
+                            <% }else if((page)%5==0){ %>   
+                                <%= page-4 %>
+                            <% } %>    
+                        </a>
+                    </li>
+                    <li class="page-item">
+                        <a class="page-link"
+                            <% if((page-1)%5==0){ %>
+                                href=<%- "/ViewAll?page="+(+page + +1).toString() %>
+                            <% }else if((page-2)%5==0){ %>
+                                href=<%- "/ViewAll?page="+(page).toString() %>   
+                            <% }else if((page-3)%5==0){ %>
+                                href=<%- "/ViewAll?page="+(page-1).toString() %>   
+                            <% }else if((page-4)%5==0){ %>
+                                href=<%- "/ViewAll?page="+(page-2).toString() %>   
+                            <% }else if((page)%5==0){ %>
+                                href=<%- "/ViewAll?page="+(page-3).toString() %>   
+                            <% } %>
+                        > 
+                            <% if((page-1)%5==0){ %>
+                                <%= (+page + +1) %>
+                            <% }else if((page-2)%5==0){ %>   
+                                <%= page %>
+                            <% }else if((page-3)%5==0){ %>   
+                                <%= page-1 %>
+                            <% }else if((page-4)%5==0){ %>   
+                                <%= page-2 %>
+                            <% }else if((page)%5==0){ %>   
+                                <%= page-3 %>
+                            <% } %>    
+                        </a>
+                    </li>
+                    <% if(page==121 || page==122){ %> 
+                        <li class="page-item d-none">
+                            <a class="page-link"
+                                <% if((page-1)%5==0){ %>
+                                    href=<%- "/ViewAll?page="+(+page + +2).toString() %>
+                                <% }else if((page-2)%5==0){ %>
+                                    href=<%- "/ViewAll?page="+(+page + +1).toString() %>   
+                                <% }else if((page-3)%5==0){ %>
+                                    href=<%- "/ViewAll?page="+(page).toString() %>   
+                                <% }else if((page-4)%5==0){ %>
+                                    href=<%- "/ViewAll?page="+(page-1).toString() %>   
+                                <% }else if((page)%5==0){ %>
+                                    href=<%- "/ViewAll?page="+(page-2).toString() %>   
+                                <% } %>
+                            > 
+                                <% if((page-1)%5==0){ %>
+                                    <%= (+page + +2) %>
+                                <% }else if((page-2)%5==0){ %>   
+                                    <%= (+page + +1) %>
+                                <% }else if((page-3)%5==0){ %>   
+                                    <%= page %>
+                                <% }else if((page-4)%5==0){ %>   
+                                    <%= page-1 %>
+                                <% }else if((page)%5==0){ %>   
+                                    <%= page-2 %>
+                                <% } %>    
+                            </a>
+                        </li>
+                    <% }else{ %>
+                        <li class="page-item">
+                            <a class="page-link"
+                                <% if((page-1)%5==0){ %>
+                                    href=<%- "/ViewAll?page="+(+page + +2).toString() %>
+                                <% }else if((page-2)%5==0){ %>
+                                    href=<%- "/ViewAll?page="+(+page + +1).toString() %>   
+                                <% }else if((page-3)%5==0){ %>
+                                    href=<%- "/ViewAll?page="+(page).toString() %>   
+                                <% }else if((page-4)%5==0){ %>
+                                    href=<%- "/ViewAll?page="+(page-1).toString() %>   
+                                <% }else if((page)%5==0){ %>
+                                    href=<%- "/ViewAll?page="+(page-2).toString() %>   
+                                <% } %>
+                            > 
+                                <% if((page-1)%5==0){ %>
+                                    <%= (+page + +2) %>
+                                <% }else if((page-2)%5==0){ %>   
+                                    <%= (+page + +1) %>
+                                <% }else if((page-3)%5==0){ %>   
+                                    <%= page %>
+                                <% }else if((page-4)%5==0){ %>   
+                                    <%= page-1 %>
+                                <% }else if((page)%5==0){ %>   
+                                    <%= page-2 %>
+                                <% } %>    
+                            </a>
+                        </li>
+                    <% } %>  
+                    <% if(page==121 || page==122){ %>
+                        <li class="page-item d-none">
+                            <a class="page-link"
+                                <% if((page-1)%5==0){ %>
+                                    href=<%- "/ViewAll?page="+(+page + +3).toString() %>
+                                <% }else if((page-2)%5==0){ %>
+                                    href=<%- "/ViewAll?page="+(+page + +2).toString() %>   
+                                <% }else if((page-3)%5==0){ %>
+                                    href=<%- "/ViewAll?page="+(+page + +1).toString() %>   
+                                <% }else if((page-4)%5==0){ %>
+                                    href=<%- "/ViewAll?page="+(page).toString() %>   
+                                <% }else if((page)%5==0){ %>
+                                    href=<%- "/ViewAll?page="+(page-1).toString() %>   
+                                <% } %>
+                            > 
+                                <% if((page-1)%5==0){ %>
+                                    <%= (+page + +3) %>
+                                <% }else if((page-2)%5==0){ %>   
+                                    <%= (+page + +2) %>
+                                <% }else if((page-3)%5==0){ %>   
+                                    <%= (+page + +1) %>
+                                <% }else if((page-4)%5==0){ %>   
+                                    <%= page %>
+                                <% }else if((page)%5==0){ %>   
+                                    <%= page-1 %>
+                                <% } %>    
+                            </a>
+                        </li>
+                    <% }else{ %>
+                        <li class="page-item">
+                            <a class="page-link"
+                                <% if((page-1)%5==0){ %>
+                                    href=<%- "/ViewAll?page="+(+page + +3).toString() %>
+                                <% }else if((page-2)%5==0){ %>
+                                    href=<%- "/ViewAll?page="+(+page + +2).toString() %>   
+                                <% }else if((page-3)%5==0){ %>
+                                    href=<%- "/ViewAll?page="+(+page + +1).toString() %>   
+                                <% }else if((page-4)%5==0){ %>
+                                    href=<%- "/ViewAll?page="+(page).toString() %>   
+                                <% }else if((page)%5==0){ %>
+                                    href=<%- "/ViewAll?page="+(page-1).toString() %>   
+                                <% } %>
+                            > 
+                                <% if((page-1)%5==0){ %>
+                                    <%= (+page + +3) %>
+                                <% }else if((page-2)%5==0){ %>   
+                                    <%= (+page + +2) %>
+                                <% }else if((page-3)%5==0){ %>   
+                                    <%= (+page + +1) %>
+                                <% }else if((page-4)%5==0){ %>   
+                                    <%= page %>
+                                <% }else if((page)%5==0){ %>   
+                                    <%= page-1 %>
+                                <% } %>    
+                            </a>
+                        </li>
+                    <% } %>  
+                    <% if(page==121 || page==122){ %> 
+                        <li class="page-item d-none">
+                            <a class="page-link"
+                                <% if((page-1)%5==0){ %>
+                                    href=<%- "/ViewAll?page="+(+page + +4).toString() %>
+                                <% }else if((page-2)%5==0){ %>
+                                    href=<%- "/ViewAll?page="+(+page + +3).toString() %>   
+                                <% }else if((page-3)%5==0){ %>
+                                    href=<%- "/ViewAll?page="+(+page + +2).toString() %>   
+                                <% }else if((page-4)%5==0){ %>
+                                    href=<%- "/ViewAll?page="+(+page + +1).toString() %>   
+                                <% }else if((page)%5==0){ %>
+                                    href=<%- "/ViewAll?page="+(page).toString() %>   
+                                <% } %>
+                            > 
+                                <% if((page-1)%5==0){ %>
+                                    <%= (+page + +4) %>
+                                <% }else if((page-2)%5==0){ %>   
+                                    <%= (+page + +3) %>
+                                <% }else if((page-3)%5==0){ %>   
+                                    <%= (+page + +2) %>
+                                <% }else if((page-4)%5==0){ %>   
+                                    <%= (+page + +1) %>
+                                <% }else if((page)%5==0){ %>   
+                                    <%= page %>
+                                <% } %>    
+                            </a>
+                        </li>
+                    <% }else{ %>
+                        <li class="page-item">
+                            <a class="page-link"
+                                <% if((page-1)%5==0){ %>
+                                    href=<%- "/ViewAll?page="+(+page + +4).toString() %>
+                                <% }else if((page-2)%5==0){ %>
+                                    href=<%- "/ViewAll?page="+(+page + +3).toString() %>   
+                                <% }else if((page-3)%5==0){ %>
+                                    href=<%- "/ViewAll?page="+(+page + +2).toString() %>   
+                                <% }else if((page-4)%5==0){ %>
+                                    href=<%- "/ViewAll?page="+(+page + +1).toString() %>   
+                                <% }else if((page)%5==0){ %>
+                                    href=<%- "/ViewAll?page="+(page).toString() %>   
+                                <% } %>
+                            > 
+                                <% if((page-1)%5==0){ %>
+                                    <%= (+page + +4) %>
+                                <% }else if((page-2)%5==0){ %>   
+                                    <%= (+page + +3) %>
+                                <% }else if((page-3)%5==0){ %>   
+                                    <%= (+page + +2) %>
+                                <% }else if((page-4)%5==0){ %>   
+                                    <%= (+page + +1) %>
+                                <% }else if((page)%5==0){ %>   
+                                    <%= page %>
+                                <% } %>    
+                            </a>
+                        </li>
+                    <% } %>  
+                    <% if(page==122){ %>
+                        <li class="page-item disabled">
+                            <a class="page-link" href="#" tabindex="-1">Next</a>
+                        </li>
+                    <% }else{ %>
+                        <li class="page-item">
+                            <a class="page-link" href=<%- "/ViewAll?page="+(+page + +1).toString() %>>Next</a>
+                        </li>
+                    <% } %>
+                    <% if(page>112){ %>
+                        <li class="page-item disabled">
+                            <a class="page-link" href="#" tabindex="-1">
+                                <span>&raquo;</span>
+                            </a>
+                        </li>
+                    <% }else{ %>
+                        <li class="page-item">
+                            <a class="page-link" href=<%- "/ViewAll?page="+(+page + +10).toString() %> >
+                                <span>&raquo;</span>
+                            </a>
+                        </li>
+                    <% } %>
+                </ul>
+            </nav>
+        </section>
+        <%- include('../partials/aside.ejs') %>
+        <footer class="footer-container">
+            <p class="text-center pt-3 text-light">@ Web App Development</p>
+        </footer>
+    </div>
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <script>
+        const pag = "<%= page %>";
+        const pages = document.getElementsByClassName("page-link");
+        for(var i=0;i<pages.length;i++){
+            if(pages[i].innerText==pag){
+                pages[i].classList.add("active");
+            }
+        }
+    </script>
+</body>
+</html>

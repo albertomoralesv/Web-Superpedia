@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="/images/favicon.ico">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="style.css"/>
+    <title>SuperPedia</title>
+</head>
+<body>
+    <div class="main-container-search bg-success">
+        <%- include('../partials/header.ejs') %>
+        <section class="d-flex flex-column">
+            <form class="container d-flex justify-content-center align-items-center pt-5" method="POST" action='/ViewSearch'>
+                <div>
+                    <div >
+                    <div class="form-floating mb-2">
+                        <input type="text" class="form-control required" id="searchPar" name="searchPar" placeholder="...">
+                        <label for="Search">Search:</label>
+                    </div>
+                    </div>
+                </div>
+                <input style="max-width: 10rem;" id="search-button" class="ms-1" type="submit" value="Search" onclick="loading()"/>
+                <button class="btn btn-primary ms-3 d-none" id="load-button" type="button" disabled>
+                    <span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>
+                    Searching...
+                </button>
+            </form>
+        </section>
+        <%- include('../partials/aside.ejs') %>
+        <footer class="footer-container">
+            <p class="text-center pt-3 text-light">@ Web App Development</p>
+        </footer>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <script>
+        function loading(){
+            document.getElementById("load-button").classList.remove("d-none");
+            document.getElementById("search-button").classList.add("like-disabled");
+            document.getElementById("searchPar").classList.add("like-disabled");
+        }
+    </script>
+</body>
+</html>

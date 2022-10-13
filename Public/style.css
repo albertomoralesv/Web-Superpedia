@@ -1,0 +1,257 @@
+*{
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Courier New', monospace;
+    background-image: url("Backgrounds/bg-3.png");
+    position: relative;
+    overflow-x: hidden;
+}
+
+.main-container{
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background-image: url("Backgrounds/bg-1.png");
+}   
+
+header{
+    background-color: black;
+    border-radius: 5%;
+    border-bottom: solid blueviolet;
+    min-height: 10vh;
+}
+
+.bar1, .bar2, .bar3 {
+    width: 35px;
+    height: 5px;
+    background-color: rgb(255, 255, 255);
+    margin: 6px 0;
+}
+
+#sidemenu{
+    max-width: 10rem;
+    background-image: url("Backgrounds/bg-2.png");
+}
+
+.offcanvas-body a{
+    color: black;
+}
+
+.offcanvas-body a:hover{
+    color: white;
+}
+
+
+.body-container{
+    background-color: tomato;
+}
+
+.footer-container{
+    position: relative;
+    bottom: 0;
+    background-color: black;
+    min-height: 8vh;
+    width: 100%;
+    
+}
+
+.card{
+    width: calc(80vw/3);
+    background-color: black;
+    color: white;
+    border-radius: 5%;
+}
+
+@media only screen and (max-width: 576px) {
+    .card {
+      width: calc(80vw/2);
+
+    }
+}
+
+.card img{
+    width: calc(80vw/3);
+    height: calc(80vw/4);
+    border-radius: 5%;
+}
+
+@media only screen and (max-width: 576px) {
+    .card img{
+        width: calc(80vw/2);
+        height: calc(80vw/3);
+    }
+}
+
+.card li{
+    background-color: #584F4F;
+    color: whitesmoke;
+    border-radius: 5%;
+}
+
+.pagination a{
+    background-color: gray;
+    color: black;
+}
+
+@media only screen and (max-width: 576px) {
+    .pagination a{
+        font-size: smaller;
+        padding: 5px;
+    }
+}
+
+a.active{
+    background-color: black;
+    color: white;
+    pointer-events: none;
+    cursor: default;
+}
+
+#MainTitle{
+    vertical-align: middle;
+    color: white;
+    font-size: 5rem;
+}
+
+#main-options a{
+    font-size: 1.5rem;
+}
+
+@media only screen and (max-width: 576px) {
+    #MainTitle{
+        font-size: 4rem;
+    }
+    
+    #main-options a{
+        font-size: 1rem;
+    }
+}
+
+#main-options a:hover{
+    background-color: blue;
+}
+
+.main-container-one{
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background-image: url("Backgrounds/bg-4.png");
+} 
+
+section{
+    min-height: 81.5vh;
+}
+
+.main-page{
+    min-height: 100vh;
+    overflow-y: hidden;
+}
+
+.main-container-one img{
+    max-width: 50vh;
+}
+
+@media only screen and (max-width: 700px) {
+    .main-container-one img{
+        max-width: 30vh;
+    }
+}
+
+@media only screen and (max-width: 576px) {
+    .main-container-one img{
+        max-width: 15vh;
+    }
+}
+
+section .a-button{
+    min-width: fit-content;
+    max-width: 30vw;
+    background-color: black;
+    color: white;
+    text-decoration: none;
+    padding: 2px 6px 2px 6px;
+    border-top: 1px solid #CCCCCC;
+    border-right: 1px solid #333333;
+    border-bottom: 1px solid #333333;
+    border-left: 1px solid #CCCCCC;
+    border-radius: 25%;
+}
+
+@media only screen and (max-width: 576px) {
+    section .a-button{
+        min-width: fit-content;
+    }
+}
+
+@media only screen and (max-width: 436px) {
+    section .page-change{
+        min-width: fit-content;
+    }
+}
+
+section .a-button:hover{
+    background-color: gray;
+    color: white;
+}
+
+@media only screen and (max-width: 1015px) {
+    .main-container-one .a-button{
+        min-width: 30vw;
+    }
+    #btn-id-name{
+        display:none;
+    }
+
+}
+
+@media only screen and (min-width: 1016px) {
+    #btn-id{
+        display:none;
+    }
+}
+
+#Info button{
+    min-width: fit-content;
+    max-width: 30vw;
+    background-color: black;
+    color: white;
+    border-radius: 25%;
+}
+
+#Info button:hover{
+    background-color: blue;
+    color: white;
+}
+
+.main-container-recent{
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background-image: url("Backgrounds/bg-6.png");
+} 
+
+.main-container-search{
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background-image: url("Backgrounds/bg-5.png");
+}
+
+.search-text{
+    color: white;
+}
+
+.like-disabled{
+    pointer-events:none;
+    cursor: default;
+    background-color:#cccccc; 
+    color:#ffffff;
+    opacity: 0.5;
+}
+
+.error-page{
+    min-height: 100vh;
+    background-image: url("Backgrounds/bg-7.png");
+}
